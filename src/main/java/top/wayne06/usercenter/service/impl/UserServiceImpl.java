@@ -15,6 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static top.wayne06.usercenter.constant.UserConstant.SALT;
+import static top.wayne06.usercenter.constant.UserConstant.USER_LOGIN_STATE;
+
 /**
  *
  */
@@ -24,13 +27,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Resource
     private UserMapper userMapper;
-
-    /**
-     * 盐值,将密码进行混淆
-     */
-    private static final String SALT = "tlas";
-
-    public static final String USER_LOGIN_STATE = "USER_LOGIN_STATE";
 
     @Override
     public long userRegister(String userAccount, String password, String repeatPassword) {
@@ -111,25 +107,26 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return null;
         }
         // 用户信息脱敏
-        User safetyUser = getSafetyUser(user);
+        User secureUser = getSecureUser(user);
         // 用户登录成功
-        request.getSession().setAttribute(USER_LOGIN_STATE, safetyUser);
-        return safetyUser;
+        request.getSession().setAttribute(USER_LOGIN_STATE, secureUser);
+        return secureUser;
     }
 
-    private User getSafetyUser(User user) {
+    @Override
+    public User getSecureUser(User originalUser) {
         User safetyUser = new User();
-        safetyUser.setId(user.getId());
-        safetyUser.setUsername(user.getUsername());
-        safetyUser.setUserAccount(user.getUserAccount());
-        safetyUser.setAvatarUrl(user.getAvatarUrl());
-        safetyUser.setGender(user.getGender());
-        safetyUser.setPhone(user.getPhone());
-        safetyUser.setEmail(user.getEmail());
-        safetyUser.setUserCode(user.getUserCode());
-        safetyUser.setUserRole(user.getUserRole());
-        safetyUser.setUserStatus(user.getUserStatus());
-        safetyUser.setCreateTime(user.getCreateTime());
+        safetyUser.setId(originalUser.getId());
+        safetyUser.setUsername(originalUser.getUsername());
+        safetyUser.setUserAccount(originalUser.getUserAccount());
+        safetyUser.setAvatarUrl(originalUser.getAvatarUrl());
+        safetyUser.setGender(originalUser.getGender());
+        safetyUser.setPhone(originalUser.getPhone());
+        safetyUser.setEmail(originalUser.getEmail());
+        safetyUser.setUserCode(originalUser.getUserCode());
+        safetyUser.setUserRole(originalUser.getUserRole());
+        safetyUser.setUserStatus(originalUser.getUserStatus());
+        safetyUser.setCreateTime(originalUser.getCreateTime());
         return safetyUser;
     }
 

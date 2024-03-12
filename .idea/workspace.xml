@@ -2,19 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9888f9b6-73ed-438b-a16d-598b59dbdf9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b1fc88ef-7e2f-464e-a29c-84caf1bb3e29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b1fc88ef-7e2f-464e-a29c-84caf1bb3e29.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/model/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/top/wayne06/usercenter/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/wayne06/usercenter/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wayne06/usercenter/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wayne06/usercenter/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/top/wayne06/usercenter/model/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wayne06/usercenter/model/domain/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/top/wayne06/usercenter/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wayne06/usercenter/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/top/wayne06/usercenter/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wayne06/usercenter/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/top/wayne06/usercenter/service/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/top/wayne06/usercenter/service/UserServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,16 +37,16 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="jdbc:mysql://localhost:3306/wnuser?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="jdbc:mysql://localhost:3306/wnuser?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="jdbc:mysql://localhost:3306/wnuser?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="wnuser: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
@@ -56,14 +58,12 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response5.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -117,6 +117,334 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="ED8E8EF769CF9BCD7B80EC8AFE762A3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/user/delete" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;id&quot;:&quot;1l&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="ED8E8EF769CF9BCD7B80EC8AFE762A3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/user/delete" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;id&quot;:&quot;1&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="ED8E8EF769CF9BCD7B80EC8AFE762A3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/user/delete" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;id&quot;: 1}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="ED8E8EF769CF9BCD7B80EC8AFE762A3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/user/search" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="wayne" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="ED8E8EF769CF9BCD7B80EC8AFE762A3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/user/search" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="a" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="ED8E8EF769CF9BCD7B80EC8AFE762A3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/user/search" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="&quot;a&quot;" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="ED8E8EF769CF9BCD7B80EC8AFE762A3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/user/search" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="'a'" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="ED8E8EF769CF9BCD7B80EC8AFE762A3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/user/search" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;wayne&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="ED8E8EF769CF9BCD7B80EC8AFE762A3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/user/search" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;a&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="ED8E8EF769CF9BCD7B80EC8AFE762A3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/user/search" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="0006C9D79B62841B62885B27872CD0C6" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/user/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;userAccount&quot;:&quot;wnzhong&quot;, &quot;userPassword&quot;:12345678}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="POST" />
           <option name="urlBase" value="http://localhost:8080/user/login" />
@@ -188,44 +516,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.rest-api_3#1">
+  <component name="RunManager" selected="HTTP Request.rest-api_4#1">
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="rest-api_3#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_3.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="SampleTest.testSelect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-center" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="top.wayne06.usercenter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="top.wayne06.usercenter" />
-      <option name="MAIN_CLASS_NAME" value="top.wayne06.usercenter.SampleTest" />
-      <option name="METHOD_NAME" value="testSelect" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="rest-api_4#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_4.http" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest.testAddUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-center" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="top.wayne06.usercenter.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="top.wayne06.usercenter.service" />
-      <option name="MAIN_CLASS_NAME" value="top.wayne06.usercenter.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testAddUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="rest-api_4#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_4.http" index="2" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="UserServiceTest.userRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-center" />
@@ -252,11 +554,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.rest-api_4#1" />
+        <item itemvalue="HTTP Request.rest-api_4#2" />
         <item itemvalue="HTTP Request.rest-api_3#1" />
         <item itemvalue="HTTP Request.rest-api#1" />
         <item itemvalue="JUnit.UserServiceTest.userRegister" />
-        <item itemvalue="JUnit.UserServiceTest.testAddUser" />
-        <item itemvalue="JUnit.SampleTest.testSelect" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +567,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:jdbc:mysql://localhost:3306/wnuser?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:jdbc:mysql://localhost:3306/wnuser?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@64682f9a" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -289,6 +601,7 @@
       <workItem from="1710074417460" duration="2003000" />
       <workItem from="1710118977157" duration="10049000" />
       <workItem from="1710161808522" duration="6038000" />
+      <workItem from="1710252191133" duration="3785000" />
     </task>
     <servers />
   </component>
@@ -304,13 +617,15 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="452" y="105" key="#Project_Structure/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1709974456351" />
-    <state x="46" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1709978856926">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1151" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1710253817702">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1151" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710253817702" />
     <state x="46" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1709978856926" />
-    <state x="721" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1710162731724">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1199" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1710253159591">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1199" y="178" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710253159591" />
     <state x="721" y="178" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710162731724" />
     <state x="628" y="257" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1710163305250">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -324,37 +639,45 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="627" y="218" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710073028028" />
-    <state width="1867" height="211" key="GridCell.Tab.0.bottom" timestamp="1710169295414">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1867" height="273" key="GridCell.Tab.0.bottom" timestamp="1710256075804">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1867" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710256075804" />
     <state width="1867" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710169295414" />
-    <state width="1867" height="211" key="GridCell.Tab.0.center" timestamp="1710169295414">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1867" height="273" key="GridCell.Tab.0.center" timestamp="1710256075804">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1867" height="273" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710256075804" />
     <state width="1867" height="211" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710169295414" />
-    <state width="1867" height="211" key="GridCell.Tab.0.left" timestamp="1710169295414">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1867" height="273" key="GridCell.Tab.0.left" timestamp="1710256075804">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1867" height="273" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710256075804" />
     <state width="1867" height="211" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710169295414" />
-    <state width="1867" height="211" key="GridCell.Tab.0.right" timestamp="1710169295414">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1867" height="273" key="GridCell.Tab.0.right" timestamp="1710256075804">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1867" height="273" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710256075804" />
     <state width="1867" height="211" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710169295414" />
-    <state width="1867" height="211" key="GridCell.Tab.1.bottom" timestamp="1710169295416">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1867" height="273" key="GridCell.Tab.1.bottom" timestamp="1710256075804">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1867" height="273" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710256075804" />
     <state width="1867" height="211" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710169295416" />
-    <state width="1867" height="211" key="GridCell.Tab.1.center" timestamp="1710169295416">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1867" height="273" key="GridCell.Tab.1.center" timestamp="1710256075804">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1867" height="273" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710256075804" />
     <state width="1867" height="211" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710169295416" />
-    <state width="1867" height="211" key="GridCell.Tab.1.left" timestamp="1710169295416">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1867" height="273" key="GridCell.Tab.1.left" timestamp="1710256075804">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1867" height="273" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710256075804" />
     <state width="1867" height="211" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710169295416" />
-    <state width="1867" height="211" key="GridCell.Tab.1.right" timestamp="1710169295416">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1867" height="273" key="GridCell.Tab.1.right" timestamp="1710256075804">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1867" height="273" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710256075804" />
     <state width="1867" height="211" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710169295416" />
     <state width="264" height="550" key="HiddenNamespacesPopup" timestamp="1709974921871">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -364,6 +687,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="348" y="83" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1710163980320" />
+    <state x="-1319" y="96" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1710253933694">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1319" y="96" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1710253933694" />
     <state x="806" y="254" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1709975040351">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -393,9 +720,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/service/impl/UserServiceImpl.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/controller/UserController.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/top/wayne06/usercenter/controller/UserController.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

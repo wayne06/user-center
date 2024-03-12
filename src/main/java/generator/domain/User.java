@@ -1,7 +1,9 @@
-package top.wayne06.usercenter.model.domain;
+package generator.domain;
 
-import com.baomidou.mybatisplus.annotation.*;
-
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
@@ -66,18 +68,18 @@ public class User implements Serializable {
     private Date createTime;
 
     /**
-     *
+     * 
      */
     private Date updateTime;
 
     /**
      * 是否删除
      */
-    @TableLogic
     private Byte isDelete;
 
     /**
-     * 用户角色 0- 普通用户 1 - 管理员
+     * 用户角色 0
+- 普通用户 1 - 管理员
      */
     private Integer userRole;
 
