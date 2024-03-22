@@ -1,9 +1,8 @@
 package top.wayne06.usercenter.service;
 
-import top.wayne06.usercenter.model.domain.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import top.wayne06.usercenter.model.domain.User;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
 /**

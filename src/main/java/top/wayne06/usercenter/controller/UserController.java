@@ -3,6 +3,9 @@ package top.wayne06.usercenter.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import top.wayne06.usercenter.common.GeneralResponse;
+import top.wayne06.usercenter.common.ResultCode;
+import top.wayne06.usercenter.exception.BusinessException;
 import top.wayne06.usercenter.model.domain.User;
 import top.wayne06.usercenter.model.request.UserLoginRequest;
 import top.wayne06.usercenter.model.request.UserRegisterRequest;
@@ -25,9 +28,10 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public Long userRegister(@RequestBody UserRegisterRequest userRegisterRequest) {
+    public GeneralResponse<Long> userRegister(@RequestBody UserRegisterRequest userRegisterRequest) {
         if (userRegisterRequest == null) {
-            return null;
+            //return GeneralResponse.failure(ResultCode.PARAMS_ERROR);
+            throw new BusinessException(ResultCode.PARAMS_ERROR);
         }
         String userAccount = userRegisterRequest.getUserAccount();
         String password = userRegisterRequest.getUserPassword();
@@ -35,11 +39,13 @@ public class UserController {
         if (StringUtils.isAnyBlank(userAccount, password, repeatPassword)) {
             return null;
         }
-        return userService.userRegister(userAccount, password, repeatPassword);
+        //return userService.userRegister(userAccount, password, repeatPassword);
+        Long id = userService.userRegister(userAccount, password, repeatPassword);
+        return GeneralResponse.success(id);
     }
 
     @PostMapping("/login")
-    public User userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request) {
+    public GeneralResponse<User> userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request) {
         if (userLoginRequest == null) {
             return null;
         }
@@ -48,32 +54,36 @@ public class UserController {
         if (StringUtils.isAnyBlank(userAccount, userPassword)) {
             return null;
         }
-        return userService.userLogin(userAccount, userPassword, request);
+        //return userService.userLogin(userAccount, userPassword, request);
+        User user = userService.userLogin(userAccount, userPassword, request);
+        return GeneralResponse.success(user);
     }
 
     @GetMapping("/search")
-    public List<User> searchUsers(String username, HttpServletRequest request) {
+    public GeneralResponse<List<User>> searchUsers(String username, HttpServletRequest request) {
         // 管理员校验
         if (!isAdmin(request)) {
-            return new ArrayList<>();
+            return GeneralResponse.failure(ResultCode.REDIRECT);
         }
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         if (StringUtils.isNotBlank(username)) {
             queryWrapper.like("username", username);
         }
         List<User> userList = userService.list(queryWrapper);
-        return userList.stream().map(userService::getSecureUser).collect(Collectors.toList());
+        List<User> secureUsers = userList.stream().map(userService::getSecureUser).collect(Collectors.toList());
+        return GeneralResponse.success(secureUsers);
     }
 
     @PostMapping("/delete")
-    public boolean deleteUser(@RequestBody long id, HttpServletRequest request) {
+    public GeneralResponse<Boolean> deleteUser(@RequestBody long id, HttpServletRequest request) {
         if (!isAdmin(request)) {
-            return false;
+            return GeneralResponse.success(false);
         }
         if (id < 0) {
-            return false;
+            return GeneralResponse.success(false);
         }
-        return userService.removeById(id);
+        Boolean result = userService.removeById(id);
+        return GeneralResponse.success(result);
     }
 
     private boolean isAdmin(HttpServletRequest request) {

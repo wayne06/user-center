@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
+import top.wayne06.usercenter.common.ResultCode;
+import top.wayne06.usercenter.exception.BusinessException;
 import top.wayne06.usercenter.mapper.UserMapper;
 import top.wayne06.usercenter.model.domain.User;
 import top.wayne06.usercenter.service.UserService;
@@ -33,15 +35,18 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         // 1.校验
         // 非空校验
         if (StringUtils.isAnyBlank(userAccount, password, repeatPassword)) {
-            return -1;
+            //return -1;
+            throw new BusinessException(ResultCode.PARAMS_ERROR);
         }
         // 账号长度不小于4位
         if (userAccount.length() < 4) {
-            return -1;
+            //return -1;
+            throw new BusinessException(ResultCode.PARAMS_ERROR, "userAccount length too short");
         }
         // 密码不小于8位
         if (password.length() < 8 || repeatPassword.length() < 8) {
-            return -1;
+            //return -1;
+            throw new BusinessException(1001, "password too short");
         }
         // 账户不包含特殊字符，特殊字符使用正则表达式筛选
         String validPattern = "[`~!@#$%^&*()+=|{}':;',\\\\[\\\\].<>/?~！@#￥%……&*（）——+ | {}【】‘；：”“’。，、？]";
